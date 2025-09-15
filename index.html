@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Игра: Рациональные числа</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef6fb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #c2185b;
+      text-align: center;
+    }
+    .card {
+      background: #fff0f5;
+      border-radius: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card.correct {
+      animation: correctFlash 0.5s ease;
+    }
+    .card.incorrect {
+      animation: wrongFlash 0.5s ease;
+    }
+    @keyframes correctFlash {
+      0% { background-color: #d0f8ce; }
+      100% { background-color: #fff0f5; }
+    }
+    @keyframes wrongFlash {
+      0% { background-color: #ffcdd2; }
+      100% { background-color: #fff0f5; }
+    }
+    .question {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+    .answers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .answers button {
+      background: #f48fb1;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .answers button:hover {
+      background: #ec407a;
+      color: white;
+    }
+    .feedback {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .status {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .telegram {
+      margin-top: 2rem;
+    }
+    .telegram a {
+      text-decoration: none;
+      color: white;
+      background: #0088cc;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 2rem;
+      display: inline-block;
+    }
+    sup {
+      font-size: 0.7em;
+      vertical-align: super;
+    }
+    sub {
+      font-size: 0.7em;
+      vertical-align: sub;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Игра: Рациональные числа</h1>
+  <div class="status" id="status">Уровень: 1 | Жизни: ❤️❤️❤️</div>
+  <div class="card" id="card">
+    <div class="question" id="question">– × + = ?</div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <div class="telegram">
+    <a href="https://t.me/yourtelegram" target="_blank">Телеграм-канал</a>
+  </div>
+
+  <script>
+    // скрипт остаётся без изменений
+    // ...
+  </script>
+</body>
+</html>
